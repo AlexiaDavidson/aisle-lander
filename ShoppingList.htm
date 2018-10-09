@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <!--How to design a shopping cart UI: https://designmodo.com/shopping-cart-ui/-->
+    <head>
+        <link rel="stylesheet" type="text/css" href="FFT.css">
+        <link rel="stylesheet" type="text/css" href="ShoppingList.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <main>
+        <header>
+            <nav>
+                <div>
+                    <!--TODO: Menu button-->
+                    <button class="btn" id="menu"><i class="fa fa-reorder"></i></button>
+                </div>
+                <div class="logo">
+                        <!--TODO: FFT logo header thing-->
+                        <h1>Food For Thought</h1>
+                </div>
+                <div>
+                    <!--TODO: Shopping List button-->
+                    <button class="btn" id="shoppinglist"><i class="fa fa-clipboard"></i></button>
+                </div>
+            </nav>
+        </header>
+        <div class="shopping-cart">
+            <!-- Title -->
+            <div class="title">
+                Shopping List
+            </div>
+            
+            <!-- Product #1 -->
+            <div class="item">
+                <div class="buttons">
+                <button class="delete-btn">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <button class="check-btn">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                </button>
+            </div>
+            
+            <div class="image">
+                <img src="paprika.jpeg" alt="" />
+            </div>
+            
+            <div class="description">
+                <span>Ultra Premium Camel</span>
+                <span>Brown</span>
+            </div>
+            
+            <div class="quantity">
+                <button class="plus-btn" type="button" name="button">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+                <input type="text" name="name" value="1">
+                <button class="minus-btn" type="button" name="button">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </button>
+            </div>
+                
+            <div class="total-price">$2000</div>
+            </div>
+            
+            <!-- Product #2 -->
+            <div class="item">
+                <div class="buttons">
+                <button class="delete-btn">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <button class="check-btn">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                </button>
+            </div>
+            
+            <div class="image">
+                <img src="paprika.jpeg" alt="" />
+            </div>
+            
+                <div class="description">
+                <span>Cat</span>
+                <span>Obese, very nutritious</span>
+                </div>
+            
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            
+                <div class="total-price">$870</div>
+            </div>
+            
+            <!-- Product #3 -->
+            <div class="item">
+                <div class="buttons">
+                <button class="delete-btn">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <button class="check-btn">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                </button>
+            </div>
+            
+            <div class="image">
+                <img src="paprika.jpeg" alt="" />
+            </div>
+            
+                <div class="description">
+                <span>Rabbit</span>
+                <span>Free-range</span>
+                <span>Highly-nutritious</span>
+                </div>
+            
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            
+                <div class="total-price">$349</div>
+            </div>
+        </div>
+    </main>
+</html>

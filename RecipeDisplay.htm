@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Recipe display</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="RecipeDisplay.css">
+        <link rel="stylesheet" href="ShoppingList.css">
+        <link rel="stylesheet" href="FFT.css">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div>
+                    <!--TODO: Menu button-->
+                    <button class="btn" id="menu"><i class="fa fa-reorder"></i></button>
+                </div>
+                <div class="logo">
+                        <!--TODO: FFT logo header thing-->
+                        <h1>Food For Thought</h1>
+                </div>
+                <div>
+                    <!--TODO: Shopping List button-->
+                    <button class="btn" id="shoppinglist"><i class="fa fa-clipboard"></i></button>
+                </div>
+            </nav>
+        </header>
+    <div class="Container">
+        <div class="Left">
+            <div class="recipe-display">
+                <h2 class="recipe-name">Salted Egg Yolk Chicken</h2>
+            </div>
+        <!--             <div class="recipe-image">
+                        <img src="saltedegg.jpg">
+                    </div> -->
+            <div class="copy">
+                We will call this the kick-ass Chinese ZiChar version of the popcorn chicken. Chunks of deep-fried battered chicken thigh coated with the butter and salted egg yolk sauce, finish off with fiery chilli padi and fragrant curry leaves.
+                
+                This in our belief, is the perfect beer food! Utterly sinful and bound to make you gain some weight but it’s all worth it! Just wash it down with a couple of ice-cold beer and all will be good.
+            </div>
+            <div class="servings">Servings: 4</div>
+            <div class="time-taken">Time: 30 min</div>
+            <div class="skill-level">Skill: Intermediate</div>
+            <div>
+                <h3 class="label">Ingredients</h3>
+            </div>
+            <div class="ingredient-list">
+                <ol>
+                    <li>2 pcs of boneless chicken thighs (with or without skin depending on preference)</li>
+                    <li>Oil for deep-frying</li>
+                    <li>2-3 chilli padis (chopped)</li>
+                    <li>20 curry leaves</li>
+                    <li>1 egg</li>
+                    <li>1 cup potato starch</li>
+                    <li>1 tbsp oil</li>
+                    <li>20g butter</li>
+                </ol>
+            </div>
+            <div>
+                <h3 class="label">Marinade:</h3>
+            </div>
+            <div>
+                <ol class="ingredient-list">
+                    <li>1 tsp sugar</li>
+                    <li>½ tsp salt</li>
+                    <li>¼ tsp pepper</li>
+                    <li>1 tbsp rice wine</li>
+                </ol>
+            </div>
+            <div>
+                <h3 class="label">Salted egg yolk sauce (makes 2 servings):</h3>
+            </div>
+            <div>
+                <ol class="ingredient-list">
+                    <li>8 salted egg yolks</li>
+                    <li>4 tbsp oil</li>
+                    <li>1 tsp minced garlic</li>
+                    <li>1 tsp minced ginger</li>
+                </ol>
+            </div>
+            <div>
+                <h3 class="label">Steps:</h3>
+            </div>
+            <div>
+                <ol class="recipe-steps">
+                    <li>Cut 2 pcs of boneless chicken thighs into 3cm chunks</li>
+                    <li>Add ¼ tsp pepper, 1 tsp sugar, ½ tsp salt, 1 tbsp rice wine to chicken</li>
+                    <li>Let it marinate for 15 mins</li>
+                    <li>Steam 8 salted egg yolks for 10 mins</li>
+                    <li>Mash salted egg yolks as fine as possible</li>
+                    <li>Add 4 tbsp oil to pan</li>
+                    <li>Fry salted egg yolks until foamy</li>
+                    <li>Add 1 tsp minced garlic and 1 tsp minced ginger</li>
+                    <li>Fry until fragrant and set aside</li>
+                    <li>Add 1 beaten egg to the chicken thighs and mix well</li>
+                    <li>Pour 1 cup potato starch on a tray</li>
+                    <li>Evenly coat chicken thighs with potato starch</li>
+                    <li>Heat oil to 160 degrees C, deep-fry chicken thighs until golden brown</li>
+                    <li>Drain and set aside</li>
+                    <li>Chop 2-3 chilli padis</li>
+                    <li>Add 1 tbsp oil to pan</li>
+                    <li>Add chopped chilli padis and 20 curry leaves</li>
+                    <li>add 20g of butter, and half the salted egg yolk sauce</li>
+                    <li>Fry until fragrant</li>
+                    <li>Add fried chicken and toss until evenly coated with sauce</li>
+                </ol>
+            </div>
+        </div>
+        <div class="Right">
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Ultra Premium Camel</span>
+                    <span>Brown</span>
+                </div>
+                
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Ultra Premium Camel</span>
+                    <span>Brown</span>
+                </div>
+                
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Ultra Premium Camel</span>
+                    <span>Brown</span>
+                </div>
+                
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Ultra Premium Camel</span>
+                    <span>Brown</span>
+                </div>
+                
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Ultra Premium Camel</span>
+                    <span>Brown</span>
+                </div>
+                
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Ultra Premium Camel</span>
+                    <span>Brown</span>
+                </div>
+                
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <button class="add-to-button">Add to Shopping List</button>
+            </div>
+            <div>
+                <button class="add-to-button">Add to Cart</button>
+            </div>
+        </div>
+    </body>
+</html>
