@@ -7,21 +7,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--google icon library-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <main>
         <header>
             <nav>
                 <div>
                     <!--TODO: Menu button-->
-                    <button class="btn" id="menu"><i class="fa fa-reorder"></i></button>
+                    <button class="btn" id="menu"><i class="fa fa-reorder fa-lg"></i></button>
                 </div>
                 <div class="logo">
                         <!--TODO: FFT logo header thing-->
-                        <h1>Food For Thought</h1>
+                        <h1>FEAST</h1>
                 </div>
                 <div>
                     <!--TODO: Shopping List button-->
-                    <button class="btn" id="shoppinglist"><i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
+                    <button class="btn" id="shoppinglist">
+                        <i class="fa fa-shopping-basket fa-lg" aria-hidden="true"></i></button>
                 </div>
             </nav>
         </header>
@@ -40,28 +43,37 @@
                 <button class="check-btn">
                         <i class="fa fa-check" aria-hidden="true"></i>
                 </button>
-            </div>
+                </div>
             
-            <div class="image">
-                <img src="paprika.jpeg" alt="" />
-            </div>
-            
-            <div class="description">
-                <span>Ultra Premium Camel</span>
-                <span>Brown</span>
-            </div>
-            
-            <div class="quantity">
-                <button class="plus-btn" type="button" name="button">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                </button>
-                <input type="text" name="name" value="1">
-                <button class="minus-btn" type="button" name="button">
-                    <i class="fa fa-minus" aria-hidden="true"></i>
-                </button>
-            </div>
+                <div class="image">
+                    <img src="paprika.jpeg" alt="" />
+                </div>
                 
-            <div class="total-price">$2000</div>
+                <div class="description">
+                    <span>Bananas</span>
+                    <span class="available">Available</span>
+                </div>
+                
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+                    
+                <div class="total-price">$2000</div>
+
+                <div class="buttons">
+                    <button class="substitute-btn">
+                        <i class="material-icons">swap_horiz</i>  
+                    </button>
+                    <button class="location-btn">
+                        <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
             
             <!-- Product #2 -->
@@ -73,15 +85,15 @@
                 <button class="check-btn">
                         <i class="fa fa-check" aria-hidden="true"></i>
                 </button>
-            </div>
+                </div>
             
-            <div class="image">
-                <img src="paprika.jpeg" alt="" />
-            </div>
+                <div class="image">
+                    <img src="paprika.jpeg" alt="" />
+                </div>
             
                 <div class="description">
-                <span>Cat</span>
-                <span>Obese, very nutritious</span>
+                    <span>Betty Crocker's Chocolate Cake Mix</span>
+                    <span class="available">Available</span>
                 </div>
             
                 <div class="quantity">
@@ -95,27 +107,34 @@
                 </div>
             
                 <div class="total-price">$870</div>
+                <div class="buttons">
+                    <button class="substitute-btn">
+                        <i class="material-icons">swap_horiz</i>  
+                    </button>
+                    <button class="location-btn">
+                        <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
             
             <!-- Product #3 -->
             <div class="item">
                 <div class="buttons">
-                <button class="delete-btn">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                </button>
-                <button class="check-btn">
-                        <i class="fa fa-check" aria-hidden="true"></i>
-                </button>
-            </div>
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                    <button class="check-btn">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                    </button>
+                </div>
             
-            <div class="image">
-                <img src="paprika.jpeg" alt="" />
-            </div>
+                <div class="image">
+                    <img src="paprika.jpeg" alt="" />
+                </div>
             
                 <div class="description">
-                <span>Rabbit</span>
-                <span>Free-range</span>
-                <span>Highly-nutritious</span>
+                    <span>Milkman Whipped Cream</span>
+                    <span class="not-available">Not Available</span>
                 </div>
             
                 <div class="quantity">
@@ -129,6 +148,55 @@
                 </div>
             
                 <div class="total-price">$349</div>
+                <div class="buttons">
+                    <button class="substitute-btn">
+                        <i class="material-icons">swap_horiz</i>  
+                    </button>
+                    <button class="location-btn">
+                        <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <!--Product 4-->
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                    <button class="check-btn">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                    </button>
+                </div>
+            
+                <div class="image">
+                    <img src="paprika.jpeg" alt="" />
+                </div>
+            
+                <div class="description">
+                    <span>Hershey's Chocolate Chips</span>
+                    <span class="available">Available</span>
+                </div>
+            
+                <div class="quantity">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            
+                <div class="total-price">$349</div>
+                <div class="buttons">
+                    <button class="substitute-btn">
+                        <i class="material-icons">swap_horiz</i>  
+                    </button>
+                    <button class="location-btn">
+                        <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+                </div>
             </div>
         </div>
     </main>

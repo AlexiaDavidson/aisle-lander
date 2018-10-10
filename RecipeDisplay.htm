@@ -5,7 +5,7 @@
         <title>Recipe display</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/css/RecipeDisplay.css">
-        <link rel="stylesheet" href="assets/css/ShoppingList.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/ShoppingList.css">
         <link rel="stylesheet" href="assets/css/FFT.css">
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,15 +15,16 @@
             <nav>
                 <div>
                     <!--TODO: Menu button-->
-                    <button class="btn" id="menu"><i class="fa fa-reorder"></i></button>
+                    <button class="btn" id="menu"><i class="fa fa-reorder fa-lg"></i></button>
                 </div>
                 <div class="logo">
                         <!--TODO: FFT logo header thing-->
-                        <h1>Food For Thought</h1>
+                        <h1>FEAST</h1>
                 </div>
                 <div>
                     <!--TODO: Shopping List button-->
-                    <button class="btn" id="shoppinglist"><i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
+                    <button class="btn" id="shoppinglist">
+                        <i class="fa fa-shopping-basket fa-lg" aria-hidden="true"></i></button>
                 </div>
             </nav>
         </header>
@@ -117,18 +118,8 @@
                 </div>
                 
                 <div class="description">
-                    <span>Ultra Premium Camel</span>
-                    <span>Brown</span>
-                </div>
-                
-                <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                    </button>
-                    <input type="text" name="name" value="1">
-                    <button class="minus-btn" type="button" name="button">
-                        <i class="fa fa-minus" aria-hidden="true"></i>
-                    </button>
+                    <span>Boneless Chicken Thighs</span>
+                    <span class="available">Available</span>
                 </div>
             </div>
             <div class="item">
@@ -139,18 +130,8 @@
                 </div>
                 
                 <div class="description">
-                    <span>Ultra Premium Camel</span>
-                    <span>Brown</span>
-                </div>
-                
-                <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                    </button>
-                    <input type="text" name="name" value="1">
-                    <button class="minus-btn" type="button" name="button">
-                        <i class="fa fa-minus" aria-hidden="true"></i>
-                    </button>
+                    <span>Oil</span>
+                    <span class="available">Available</span>
                 </div>
             </div>
             <div class="item">
@@ -161,18 +142,8 @@
                 </div>
                 
                 <div class="description">
-                    <span>Ultra Premium Camel</span>
-                    <span>Brown</span>
-                </div>
-                
-                <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                    </button>
-                    <input type="text" name="name" value="1">
-                    <button class="minus-btn" type="button" name="button">
-                        <i class="fa fa-minus" aria-hidden="true"></i>
-                    </button>
+                    <span>Chilli Padi</span>
+                    <span class="available">Available</span>
                 </div>
             </div>
             <div class="item">
@@ -183,18 +154,8 @@
                 </div>
                 
                 <div class="description">
-                    <span>Ultra Premium Camel</span>
-                    <span>Brown</span>
-                </div>
-                
-                <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                    </button>
-                    <input type="text" name="name" value="1">
-                    <button class="minus-btn" type="button" name="button">
-                        <i class="fa fa-minus" aria-hidden="true"></i>
-                    </button>
+                    <span>Curry Leaves</span>
+                    <span class="available">Available</span>
                 </div>
             </div>
             <div class="item">
@@ -205,18 +166,8 @@
                 </div>
                 
                 <div class="description">
-                    <span>Ultra Premium Camel</span>
-                    <span>Brown</span>
-                </div>
-                
-                <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                    </button>
-                    <input type="text" name="name" value="1">
-                    <button class="minus-btn" type="button" name="button">
-                        <i class="fa fa-minus" aria-hidden="true"></i>
-                    </button>
+                    <span>Eggs</span>
+                    <span class="available">Available</span>
                 </div>
             </div>
             <div class="item">
@@ -227,25 +178,112 @@
                 </div>
                 
                 <div class="description">
-                    <span>Ultra Premium Camel</span>
-                    <span>Brown</span>
+                    <span>Potato Starch</span>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
                 </div>
                 
-                <div class="quantity">
-                    <button class="plus-btn" type="button" name="button">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                    </button>
-                    <input type="text" name="name" value="1">
-                    <button class="minus-btn" type="button" name="button">
-                        <i class="fa fa-minus" aria-hidden="true"></i>
+                <div class="description">
+                    <span>Butter</span>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
                     </button>
                 </div>
+                
+                <div class="description">
+                    <span>Sugar</span>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Salt</span>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Pepper</span>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Rice Wine</span>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Egg Yolks</span>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Garlic</span>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>Ginger</span>
+                    <span class="available">Available</span>
+                </div>
+            </div>
+
+            <div>
+                <button class="add-to-button to-list">Add to Shopping List</button>
             </div>
             <div>
-                <button class="add-to-button">Add to Shopping List</button>
-            </div>
-            <div>
-                <button class="add-to-button">Add to Cart</button>
+                <button class="add-to-button to-cart">Add to Cart</button>
             </div>
         </div>
     </body>
