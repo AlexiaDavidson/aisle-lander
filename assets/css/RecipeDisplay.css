@@ -1,11 +1,10 @@
 *{
-    font-family: Montserrat, Arial, Helvetica, sans-serif
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 /*I love me some border-box*/
-* {
-    box-sizing: border-box;
-}
+
 /*This just stops me getting horizontal scrolling if anything overflows the width*/
 body {
     overflow-x: hidden;
@@ -16,7 +15,7 @@ body {
     padding: 0;
     margin: 0;
 }
-/*Flexbox gives us the flexiness we need. The top just stays put as there is no scrolling on the body due to the page never exceeding viewport height*/
+
 header {
     background: white;
 }
@@ -25,7 +24,7 @@ nav{
     display: flex;
     align-items: center;
     width: 90%;
-    max-width: 100%;
+    max-width: auto;
     margin: 0 auto;
     justify-content: space-evenly;
 }
@@ -43,16 +42,26 @@ nav{
     margin-right: 60px;
 }
 
-.btn #menu:hover{
-    background-color: lightgrey;
+ /* Style buttons */
+ .btn {
+    background-color: #ffffff; /* White background */
+    border: none; /* Remove borders */
+    color: black; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
 }
 
+.btn:hover {
+    background-color: lightgrey;
+} 
 
+/*Flexbox gives us the flexiness we need. The top just stays put as there is no scrolling on the body due to the page never exceeding viewport height*/
 /*This is our main wrapping element, it's made 100vh high to ensure it is always the correct size and then moved into place and padded with negative margin and padding*/
 .Container {
     display: flex;
     overflow: hidden;
-    height: 100vh;
+    height: 105vh;
     margin-top: -100px;
     padding-top: 100px;
     position: relative;
@@ -70,6 +79,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     padding: .5rem;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
+    
 }
 /*Entirely optional – just wanted to remove the scrollbar on WebKit browsers as I find them ugly*/
 .Left::-webkit-scrollbar,
@@ -79,10 +89,12 @@ WebKit inertia scrolling is being added here for any present/future devices that
 /*  Left and Right are set sizes while the Middle is set to flex one so it occupies all remaining space. This could be set as a width too if prefereable, perhaps using calc.*/
 .Left {
     flex:1;
+    background-color: lightblue;
 }
 
 .Right {
     width: 33.33%;
+    background-color: #ffffff;
 }
 
 .add-to-button {
@@ -93,4 +105,25 @@ WebKit inertia scrolling is being added here for any present/future devices that
     font-size: 16px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
     float: right;
+}
+
+.to-list:hover{
+    background-color: lightgreen;
+}
+
+.to-cart:hover{
+    background-color: lightpink;
+}
+
+.item {
+padding: 20px 30px;
+height: 120px;
+display: flex;
+border-top:  1px solid #E1E8EE;
+border-bottom:  1px solid #E1E8EE;
+}
+
+
+.servings{
+    padding-top: 10px;
 }
