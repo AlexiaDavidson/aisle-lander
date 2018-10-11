@@ -167,7 +167,7 @@ color: #43484D;
 font-weight: 300;
 }
 
-button[class*=btn] {
+button {
 width: 30px;
 height: 30px;
 /*border-radius: 6px; for rounded corners*/ 
@@ -190,36 +190,36 @@ outline:0;
 }
 
 .total-price {
-    width: 83px;
-    padding-top: 27px;
-    text-align: center;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
-  }
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
 
-  @media (max-width: 800px) {
-    .shopping-cart {
-      width: 100%;
-      height: auto;
-      overflow: hidden;
-    }
-    .item {
-      height: auto;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .image img {
-      width: 50%;
-    }
-    .image,
-    .quantity,
-    .description {
-      width: 100%;
-      text-align: center;
-      margin: 6px 0;
-    }
-    .buttons {
-      margin-right: 20px;
-    }
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
   }
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image img {
+    width: 50%;
+  }
+  .image,
+  .quantity,
+  .description {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}
