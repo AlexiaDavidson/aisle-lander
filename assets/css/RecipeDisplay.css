@@ -16,46 +16,6 @@ body {
     margin: 0;
 }
 
-header {
-    background: white;
-}
-
-nav{
-    display: flex;
-    align-items: center;
-    width: 90%;
-    max-width: auto;
-    margin: 0 auto;
-    justify-content: space-evenly;
-}
-
-.btn #menu{
-    margin-left: auto;
-}
-
-.logo{
-    flex:2;
-    text-align: center;
-}
-
-.btn #shoppinglist{
-    margin-right: 60px;
-}
-
- /* Style buttons */
- .btn {
-    background-color: #ffffff; /* White background */
-    border: none; /* Remove borders */
-    color: black; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-}
-
-.btn:hover {
-    background-color: lightgrey;
-} 
-
 /*Flexbox gives us the flexiness we need. The top just stays put as there is no scrolling on the body due to the page never exceeding viewport height*/
 /*This is our main wrapping element, it's made 100vh high to ensure it is always the correct size and then moved into place and padded with negative margin and padding*/
 .Container {
@@ -89,12 +49,22 @@ WebKit inertia scrolling is being added here for any present/future devices that
 /*  Left and Right are set sizes while the Middle is set to flex one so it occupies all remaining space. This could be set as a width too if prefereable, perhaps using calc.*/
 .Left {
     flex:1;
-    background-color: lightblue;
+    background-color:#ffffff;
 }
 
 .Right {
     width: 33.33%;
     background-color: #ffffff;
+}
+
+.rcp-disp{
+    width: 200px;
+}
+
+.no-of-svgs{
+    padding-top: 24px;
+    margin-right: 60px;
+    width: 300px;
 }
 
 .add-to-button {
@@ -126,4 +96,9 @@ border-bottom:  1px solid #E1E8EE;
 
 .servings{
     padding-top: 10px;
+}
+
+.recipe-image{
+    max-width:66.66%;
+    height:auto;
 }
