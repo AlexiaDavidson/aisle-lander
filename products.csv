@@ -1,6 +1,6 @@
-quantity,name,price
-630g (10 per pack),Seng Choon Lower Cholesterol Eggs - Large,$2.90
+price,quantity,name
+$3.45,200g (2 per pack),Kelly's Sausages - Italian Bockwurst
 price,name,quantity
 $5.85,AL-Baqa Frozen Minced Beef,500g
-name,price,quantity
-Kelly's Sausages - Italian Bockwurst,$3.45,200g (2 per pack)
+quantity,name,price
+630g (10 per pack),Seng Choon Lower Cholesterol Eggs - Large,$2.90

@@ -39,22 +39,25 @@ def search_by_name(name):
 	    	if name in row['ingredients']: 
 	    		print(row['name'] )
 
-def retrieve_product():
-	p_list = []
-	with open("products.csv") as f:
-	 reader = csv.DictReader(f)
-	 for row in reader:
-		 product = {'name': row['name'],
-				   'price': row['price'],
-				   'quantity': row['quantity']
-				   }
-		 p_list.append(product)
-	return p_list
+def retrieve_product(prod):
+	rec_list = []
+	with open("products.csv") as fh:
+	    reader = csv.DictReader(fh)
+	    for row in reader:	 
+	    	print(row["quantity"])   	
+	    	if prod in row['name']: 
+	    		print(row['quantity'])
+	    		rec_list.append(row)
+	return rec_list
 recipes = search_by_ingredient(in1)
 recipe = recipes[0]
-products = retrieve_product()
-for i in recipes:
-	print(i['name'])
+#products = retrieve_product()
+#product_details = products[0]
+product_list = retrieve_product("Beef")
+# for i in product_list:
+# 	print(i)
 
 print(recipe['ingredients'][0])
-		
+
+#product = {'name':row['name'],'price':row['price'],'quantity':row['quantity']}
+#p_details.append(product)

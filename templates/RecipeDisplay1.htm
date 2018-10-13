@@ -95,7 +95,7 @@
                     </button>
                 </div>
             </div>
-            {%for item in range(products.names|length)%}
+            {%for item in range(product_name|length)%}
             <div class="item">
                 <div class="buttons">
                     <button class="delete-btn">
@@ -104,8 +104,18 @@
                 </div>
                 
                 <div class="description">
-                    <span>{{products.name}}</span>
+                    <span>{{product_name[item]}}</span>
                     <span class="available">Available</span>
+                </div>
+
+                <div class="quantity rcp-disp">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
             
