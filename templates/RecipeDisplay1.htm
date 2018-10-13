@@ -38,18 +38,17 @@
                 
                 This in our belief, is the perfect beer food! Utterly sinful and bound to make you gain some weight but it’s all worth it! Just wash it down with a couple of ice-cold beer and all will be good.
             </div>
-            <div class="servings ">Servings: 4</div>
-            <div class="time-taken ">Time: 30 min</div>
-            <div class="skill-level ">Skill: Intermediate</div>
+            <div class="servings ">Servings: {{recipe.servings}}</div>
+            <div class="time-taken ">Time: {{recipe.total_time}}</div>
             <div class="recipe-text">
                 <h3 class="label">Ingredients</h3>
             </div>
             <div class="ingredient-list ">
-                <ol>
+                <ul>
                     {%for item in range(recipe.ingredients|length)%}
                     <li>{{recipe.ingredients[item]}}</li>
                     {% endfor%}
-                </ol>
+                </ul>
             </div>
             <div>
         
@@ -96,7 +95,7 @@
                     </button>
                 </div>
             </div>
-
+            {%for item in range(products.names|length)%}
             <div class="item">
                 <div class="buttons">
                     <button class="delete-btn">
@@ -105,167 +104,12 @@
                 </div>
                 
                 <div class="description">
-                    <span>Boneless Chicken Thighs</span>
+                    <span>{{products.name}}</span>
                     <span class="available">Available</span>
                 </div>
             </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Oil</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Chilli Padi</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Curry Leaves</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Eggs</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Potato Starch</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Butter</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Sugar</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Salt</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Pepper</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Rice Wine</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Egg Yolks</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Garlic</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="buttons">
-                    <button class="delete-btn">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                
-                <div class="description">
-                    <span>Ginger</span>
-                    <span class="available">Available</span>
-                </div>
-            </div>
-
+            
+            {%endfor%}
             <div>
                 <button class="add-to-button to-list">Add to Shopping List</button>
             </div>
