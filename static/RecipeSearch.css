@@ -1,0 +1,140 @@
+*{
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+body {
+    overflow-x: hidden;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.Left,
+.Right {
+    overflow: auto;
+    height: auto;
+    padding: .5rem;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    
+}
+/*Entirely optional – just wanted to remove the scrollbar on WebKit browsers as I find them ugly*/
+.Left::-webkit-scrollbar,
+.Right::-webkit-scrollbar {
+    display: none;
+}
+/*  Left and Right are set sizes while the Middle is set to flex one so it occupies all remaining space. This could be set as a width too if prefereable, perhaps using calc.*/
+.Left {
+    flex:1;
+    background-color:#ffffff;
+}
+
+.Right {
+    width: 33.33%;
+    background-color: #ffffff;
+}
+
+body{
+    /*background-image: url("grocery.jpg");
+    */
+    background-attachment:fixed;
+    background-size:100% auto;
+    background-repeat: no-repeat;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: auto;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    padding-bottom: 5px;
+} 
+
+
+/* Container holding the image and the text */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+/* Centered text */
+.title {
+    height: 60px;
+    padding: 20px 30px;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+/*buttons*/
+#btn-container {
+    max-width: 70%;
+    margin-left: 15%;
+    background-color: antiquewhite
+} 
+/* Centered text */
+.title {
+    height: 60px;
+    padding: 20px 30px;
+    color: #fcbcbc;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+.search-btn{
+    float: left;
+    width: 33.33%;
+    background-color: #ffffff;
+    border: none;
+    color: black;
+    padding: 100px 100px;
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer; /* Mouse pointer on hover */
+}
+.search-btn:hover {
+    background-color: lightgrey; 
+}
+#recipe1:hover{
+    background-color:lightsalmon;
+}
+
+#recipe2:hover{
+    background-color: lightpink;
+}
+
+#recipe3:hover{
+    background-color: lightgreen;
+}
+#recipe4:hover{
+    background-color:rgb(157, 210, 228);
+}
+
+#recipe5:hover{
+    background-color: lightcoral;
+}
+
+#recipe6:hover{
+    background-color: lightcyan;
+}
+
+#recipe7:hover{
+    background-color:rgb(166, 217, 248);
+}
+
+#recipe8:hover{
+    background-color: rgb(248, 248, 109);
+}
+
+#recipe9:hover{
+    background-color: rgb(51, 235, 225);
+}
+
