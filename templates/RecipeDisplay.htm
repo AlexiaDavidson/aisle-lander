@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <title>Recipe display</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ShoppingList.css') }}">
+
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='RecipeDisplay.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='FFT.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ShoppingList.css') }}">
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -16,7 +17,7 @@
                 <div class="logo">
                     <!--TODO: FFT logo header thing, links back to the landing page-->
                     <h1>
-                        <a href="#">FEAST</a>
+                        <a href="index.htm">FEAST</a>
                     </h1>
                 </div>
                 <div class="shopping-nav">
@@ -33,13 +34,10 @@
             <div class="recipe-display">
                 <h2 class="recipe-name">{{recipe.name}}</h2>
             </div>
-            <div class="copy">
-                We will call this the kick-ass Chinese ZiChar version of the popcorn chicken. Chunks of deep-fried battered chicken thigh coated with the butter and salted egg yolk sauce, finish off with fiery chilli padi and fragrant curry leaves.
-                
-                This in our belief, is the perfect beer food! Utterly sinful and bound to make you gain some weight but it’s all worth it! Just wash it down with a couple of ice-cold beer and all will be good.
-            </div>
-            <div class="servings ">Servings: {{recipe.servings}}</div>
-            <div class="time-taken ">Time: {{recipe.total_time}}</div>
+
+            <div class="servings ">Servings: 4</div>
+            <div class="time-taken ">Time: 30 min</div>
+            
             <div class="recipe-text">
                 <h3 class="label">Ingredients</h3>
             </div>
@@ -50,32 +48,15 @@
                     {% endfor%}
                 </ul>
             </div>
-            <div>
-        
+            
+            <div >
                 <h3 class="label">Steps:</h3>
             </div>
             <div>
                 <ol class="recipe-steps">
-                    <li>Cut 2 pcs of boneless chicken thighs into 3cm chunks</li>
-                    <li>Add ¼ tsp pepper, 1 tsp sugar, ½ tsp salt, 1 tbsp rice wine to chicken</li>
-                    <li>Let it marinate for 15 mins</li>
-                    <li>Steam 8 salted egg yolks for 10 mins</li>
-                    <li>Mash salted egg yolks as fine as possible</li>
-                    <li>Add 4 tbsp oil to pan</li>
-                    <li>Fry salted egg yolks until foamy</li>
-                    <li>Add 1 tsp minced garlic and 1 tsp minced ginger</li>
-                    <li>Fry until fragrant and set aside</li>
-                    <li>Add 1 beaten egg to the chicken thighs and mix well</li>
-                    <li>Pour 1 cup potato starch on a tray</li>
-                    <li>Evenly coat chicken thighs with potato starch</li>
-                    <li>Heat oil to 160 degrees C, deep-fry chicken thighs until golden brown</li>
-                    <li>Drain and set aside</li>
-                    <li>Chop 2-3 chilli padis</li>
-                    <li>Add 1 tbsp oil to pan</li>
-                    <li>Add chopped chilli padis and 20 curry leaves</li>
-                    <li>add 20g of butter, and half the salted egg yolk sauce</li>
-                    <li>Fry until fragrant</li>
-                    <li>Add fried chicken and toss until evenly coated with sauce</li>
+                    {%for item in range(recipe.steps|length)%}
+                    <li>{{recipe.steps[item]}}</li>
+                    {% endfor%}
                 </ol>
             </div>
         </div>
@@ -95,6 +76,7 @@
                     </button>
                 </div>
             </div>
+
             {%for item in range(product_name|length)%}
             <div class="item">
                 <div class="buttons">
@@ -120,6 +102,7 @@
             </div>
             
             {%endfor%}
+
             <div>
                 <button class="add-to-button to-list">Add to Shopping List</button>
             </div>
