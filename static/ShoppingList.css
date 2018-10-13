@@ -125,11 +125,15 @@ cursor: pointer; /* Mouse pointer on hover */
     background-color: lightgrey;
 } 
 
-
+.image {
+  max-width:90px;
+  margin-right:10px;
+}
 
 .description {
 padding-top: 10px;
 margin-right: 10px;
+margin-left:60px;
 width:200px;
 }
 
