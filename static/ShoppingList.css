@@ -43,6 +43,7 @@ font-weight: 400;
 padding: 20px 30px;
 height: 120px;
 display: flex;
+justify-content: space-evenly;
 border-top:  1px solid #E1E8EE;
 border-bottom:  1px solid #E1E8EE;
 }
@@ -56,7 +57,7 @@ padding-bottom: 30px
 .buttons {
 position: relative;
 padding-top: 30px;
-margin-right: 100px;
+margin-right: 70px;
 /*background-color: pink;*/
 align-content: center;
 }
@@ -95,7 +96,6 @@ cursor: pointer; /* Mouse pointer on hover */
 .location-btn {
 display: inline-block;
 Cursor: pointer;
-margin-left: 50px;
 }
 
 .substitute-btn {
@@ -103,6 +103,7 @@ margin-left: 50px;
     border: none; /* Remove borders */
     color: black; /* White text */
     cursor: pointer; /* Mouse pointer on hover */
+    margin-left: 10px;
 }
 
 .substitute-btn:hover {
@@ -111,6 +112,7 @@ margin-left: 50px;
 
 .location-btn {
 position: absolute;
+margin-left: 30px;
 top: 30px;
 left: 70px;
 background-color: #ffffff; /* White background */
@@ -127,8 +129,8 @@ cursor: pointer; /* Mouse pointer on hover */
 
 .description {
 padding-top: 10px;
-margin-right: 60px;
-width: 250px;
+margin-right: 10px;
+width:200px;
 }
 
 .description span {
@@ -155,7 +157,7 @@ color: green;
 
 .quantity {
 padding-top: 20px;
-margin-right: 60px;
+margin-right: 20px;
 }
 .quantity input {
 -webkit-appearance: none;
