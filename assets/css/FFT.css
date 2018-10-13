@@ -70,8 +70,8 @@ a:active{
     height: 60px;
     padding: 20px 30px;
     color: #ffffff;
-    font-size: 32px;
-    font-weight: 400;
+    font-size: 48px;
+    font-weight: bolder;
     text-align: center;
 }
 /*buttons*/
@@ -88,9 +88,10 @@ a:active{
     border: none;
     color: black;
     padding: 100px 100px;
+    height:250px;
     text-align: center;
     display: inline-block;
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer; /* Mouse pointer on hover */
 }
 .search-btn:hover {
@@ -108,3 +109,5 @@ a:active{
 #surprise:hover{
     background-color: lightgreen;
 }
+
+
