@@ -5,7 +5,8 @@ from datetime import datetime
 import csv
 
 #page = 'https://www.allrecipes.com/recipe/25037/best-big-fat-chewy-chocolate-chip-cookie/?internalSource=hub%20recipe&referringId=362&referringContentType=Recipe%20Hub'
-page = "https://www.allrecipes.com/recipe/233661/chef-johns-lasagna/?internalSource=hub%20recipe&referringContentType=Search"
+#page = "https://www.allrecipes.com/recipe/233661/chef-johns-lasagna/?internalSource=hub%20recipe&referringContentType=Search"
+page='https://www.allrecipes.com/recipe/247232/hainanese-chicken-rice/?internalSource=hub%20recipe&referringContentType=Search'
 
 def scrape(quote_page):
 	page = urllib.request.urlopen(quote_page)
