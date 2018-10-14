@@ -2,6 +2,13 @@ import csv
 import random
 
 in1 = "egg"
+def num_recipes():
+	counter = 0
+	with open("recipes.csv") as f:
+	    reader = csv.DictReader(f)
+	    for row in reader:
+	    	 counter += 1
+	return counter
 def list_parser(ing_list):
 	final_list= []
 	individual = ''
@@ -36,7 +43,7 @@ def search_by_name(name):
 	    	if name in row['ingredients']: 
 	    		print(row['name'] )
 
-def random_recipe():
+def random_recipe(num):
 	rec_list = []
 	with open("recipes.csv") as f:
 	    reader = csv.DictReader(f)
@@ -44,8 +51,7 @@ def random_recipe():
 	    	row['ingredients'] = list_parser(row['ingredients'])
 	    	row['steps'] = list_parser(row['steps'])
 	    	rec_list.append(row)
-	ran_num = random.randint(0, (len(rec_list)-1))
-	return rec_list[ran_num]
+	return rec_list[num]
 
 
 def retrieve_product():
@@ -58,16 +64,7 @@ def retrieve_product():
 	    	p_details.append(row)
 	return p_list, p_details
 
+nb_recipes = num_recipes()
 recipes = search_by_ingredient(in1)
 recipe = recipes[0]
 product_list, product_details = retrieve_product()
-# product_details = products[0]
-# product_list = products[1]
-# for i in product_list:
-# 	print(i)
-rand_rec = random_recipe()
-#print(rand_rec["name"])
-print(recipe['steps'][0])
-
-#product = {'name':row['name'],'price':row['price'],'quantity':row['quantity']}
-#p_details.append(product)

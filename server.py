@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, redirect
 import reader
+import random
 
 app = Flask(__name__)
 
@@ -10,9 +11,25 @@ def index():
 
 @app.route('/recipedisplay')
 def recipedisplay():
-	return render_template('RecipeDisplay.htm',  recipe= reader.rand_rec, products = reader.product_details, product_name = reader.product_list)
+	return render_template('RecipeDisplay.htm',  recipe= reader.recipe, products = reader.product_details, product_name = reader.product_list)
 
 @app.route('/shoppinglist')
 def shoppinglist():
 	prods = reader.product_details
 	return render_template("ShoppingList.htm", products = prods )
+
+@app.route('/surpriseme')
+def surpriseme():
+	num = reader.nb_recipes
+	ran_num = random.randint(0, (num-1))
+	return render_template('SurpriseMe_RecipeDisplay.htm',  recipe= reader.random_recipe(ran_num), products = reader.product_details, product_name = reader.product_list)
+
+@app.route('/search')
+def search():
+	return render_template('RecipeSearch.htm',  recipe= reader.recipes, product_name = reader.product_list)
+
+@app.route('/search', methods=['POST'])
+def my_form_post():
+    text = request.form['text']
+    processed_text = text.lower().strip()
+    return render_template('RecipeSearch.htm',  recipe= reader.search_by_name(processed_text), product_name = reader.product_list)

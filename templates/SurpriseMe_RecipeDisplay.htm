@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Recipe display</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='SurpriseMe_RecipeDisplay.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='FFT.css') }}">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <!--TODO: FFT logo header thing, links back to the landing page-->
+                    <h1>
+                        <a href="index.htm">FEAST</a>
+                    </h1>
+                </div>
+                <div class="shopping-nav">
+                    <!--TODO: Shopping List button-->
+                    <button class="shopping-btn" id="shoppinglist">
+                        <i class="fa fa-shopping-basket fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </header>
+    
+    <div class="surprise-btn-container">
+        
+        <button class="surp-btn"><a href="{{ url_for('surpriseme') }}">Surprise Me Again</a></button>
+        
+    </div>
+    <div class="Container">
+        <div class="Left">
+            <div class="recipe-display">
+                <h2 class="recipe-name">{{recipe.name}}</h2>
+            </div>
+
+            <div class="servings ">Servings: 4</div>
+            <div class="time-taken ">Time: 30 min</div>
+            
+            <div class="recipe-text">
+                <h3 class="label">Ingredients</h3>
+            </div>
+            <div class="ingredient-list ">
+                <ul>
+                    {%for item in range(recipe.ingredients|length)%}
+                    <li>{{recipe.ingredients[item]}}</li>
+                    {% endfor%}
+                </ul>
+            </div>
+            
+            <div >
+                <h3 class="label">Steps:</h3>
+            </div>
+            <div>
+                <ol class="recipe-steps">
+                    {%for item in range(recipe.steps|length)%}
+                    <li>{{recipe.steps[item]}}</li>
+                    {% endfor%}
+                </ol>
+            </div>
+        </div>
+        <div class="Right">
+            <div class="item">
+                <div class="no-of-svgs">
+                    <span>No. of Servings</span>
+                </div>
+                
+                <div class="quantity rcp-disp">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            {%for item in range(product_name|length)%}
+            <div class="item">
+                <div class="buttons">
+                    <button class="delete-btn">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="description">
+                    <span>{{product_name[item]}}</span>
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="quantity rcp-disp">
+                    <button class="plus-btn" type="button" name="button">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" name="name" value="1">
+                    <button class="minus-btn" type="button" name="button">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            
+            {%endfor%}
+
+            <div>
+                <button class="add-to-button to-list">Add to Shopping List</button>
+            </div>
+            <div>
+                <button class="add-to-button to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </body>
+</html>

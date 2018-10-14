@@ -4,10 +4,6 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import csv
 
-#page = 'https://www.allrecipes.com/recipe/25037/best-big-fat-chewy-chocolate-chip-cookie/?internalSource=hub%20recipe&referringId=362&referringContentType=Recipe%20Hub'
-#page = "https://www.allrecipes.com/recipe/233661/chef-johns-lasagna/?internalSource=hub%20recipe&referringContentType=Search"
-page='https://www.allrecipes.com/recipe/247232/hainanese-chicken-rice/?internalSource=hub%20recipe&referringContentType=Search'
-
 def scrape(quote_page):
 	page = urllib.request.urlopen(quote_page)
 	soup = BeautifulSoup(page, 'html.parser')
@@ -41,8 +37,14 @@ def scrape(quote_page):
 	#  w = csv.DictWriter(csv_file, recipe.keys())
 	#  w.writeheader()
 	#  w.writerow(recipe)
+f = open('recipe_links.txt', 'r')
+url_list = [] 
+for line in f:
+    url_list.append(line.strip())
 
-scrape(page)
+for i in range(len(url_list)):
+	scrape(url_list[i])
+
 
 
 
