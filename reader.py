@@ -38,6 +38,7 @@ def search_by_ingredient(ingredient):
 	return rec_list
 
 def search_by_name(name):
+	rec_list = []
 	with open("recipes.csv") as f:
 	    reader = csv.DictReader(f)
 	    for row in reader:
@@ -52,11 +53,11 @@ def random_recipe(num):
 	with open("recipes.csv") as f:
 	    reader = csv.DictReader(f)
 	    for row in reader:
-	    	row['ingredients'] = list_parser(row['ingredients'])
-	    	row['steps'] = list_parser(row['steps'])
-	    	rec_list.append(row)
+	    	if (row['name'] != ""): 
+	    		row['ingredients'] = list_parser(row['ingredients'])
+	    		row['steps'] = list_parser(row['steps']) 	    		
+	    		rec_list.append(row)
 	return rec_list[num]
-
 
 def retrieve_product():
 	p_details = []
@@ -89,7 +90,7 @@ def recipe_to_product(ingredients):
 
 nb_recipes = num_recipes()
 recipes = search_by_ingredient(in1)
-recipe = recipes[0]
+recipe = recipes[1]
 product_list, product_details = retrieve_product()
 
 h = recipe_to_product(recipe['ingredients'])

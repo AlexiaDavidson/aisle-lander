@@ -4,6 +4,10 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import csv
 
+with open('recipes.csv', 'a') as csv_file:
+ w = csv.writer(csv_file)
+ w.writerow(["name", "ingredients", "steps", "total_time", "servings"])
+
 #scrapes recipes from allrecipes.com 
 def scrape(quote_page):
 	page = urllib.request.urlopen(quote_page)
@@ -32,7 +36,6 @@ def scrape(quote_page):
 
 	with open('recipes.csv', 'a') as csv_file:
 	 w = csv.writer(csv_file)
-	 #w.writerow(["name", "ingredients", "steps", "total_time", "servings"])
 	 w.writerow([name,ingredients_list, steps_list, total_time, servings])
 	# with open('recipes.csv', 'a') as csv_file:
 	#  w = csv.DictWriter(csv_file, recipe.keys())

@@ -16,7 +16,7 @@
                 <div class="logo">
                     <!--TODO: FFT logo header thing, links back to the landing page-->
                     <h1>
-                        <a href="index.htm">FEAST</a>
+                        <a href="{{url_for('index')}}">FEAST</a>
                     </h1>
                 </div>
                 <div class="shopping-nav">
@@ -103,10 +103,14 @@
             {%endfor%}
 
             <div>
+                <a href="{{ url_for('shoppinglist') }}">
                 <button class="add-to-button to-list">Add to Shopping List</button>
+                </a>
             </div>
             <div>
+                <a href="{{ url_for('shoppinglist') }}">
                 <button class="add-to-button to-cart">Add to Cart</button>
+                </a>
             </div>
         </div>
     </body>

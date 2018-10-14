@@ -68,7 +68,7 @@
                             <img src="static/paprika.jpeg">
                         </button>
                         <div class="recip-name">
-                            <a href="#" class="recip-link">{{recipe[i].name}}</a>
+                            <a href="{{url_for('recipedisplay')}}" class="recip-link">{{recipe[i].name}}</a>
                         </div>
                     </div>
                 {% endfor %}
