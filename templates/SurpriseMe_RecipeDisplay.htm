@@ -1,3 +1,20 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @yeo-rebekah Sign out
+1
+0 0 AlexiaDavidson/aisle-lander
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+aisle-lander/templates/SurpriseMe_RecipeDisplay.htm
+ea9ef31  5 minutes ago
+@AlexiaDavidson AlexiaDavidson surprise me works but needs extra button
+     
+118 lines (105 sloc)  4.32 KB
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -26,12 +43,6 @@
                 </div>
             </nav>
         </header>
-    
-    <div class="surprise-btn-container">
-        
-        <button class="surp-btn"><a href="{{ url_for('surpriseme') }}">Surprise Me Again</a></button>
-        
-    </div>
     <div class="Container">
         <div class="Left">
             <div class="recipe-display">
@@ -64,6 +75,9 @@
             </div>
         </div>
         <div class="Right">
+            <div class="item">        
+                <button class="add-to-button surp-btn"><a href="{{ url_for('surpriseme') }}">Surprise Me Again</a></button>
+            </div>
             <div class="item">
                 <div class="no-of-svgs">
                     <span>No. of Servings</span>
