@@ -11,7 +11,7 @@ def index():
 
 @app.route('/recipedisplay')
 def recipedisplay():
-	return render_template('RecipeDisplay.htm',  recipe= reader.recipe, products = reader.product_details, product_name = reader.product_list)
+	return render_template('RecipeDisplay.htm',  recipe= reader.recipe, products = reader.las_details, product_name = reader.las_list)
 
 @app.route('/shoppinglist')
 def shoppinglist():
