@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import csv
 
+#scrapes recipes from allrecipes.com 
 def scrape(quote_page):
 	page = urllib.request.urlopen(quote_page)
 	soup = BeautifulSoup(page, 'html.parser')

@@ -5,10 +5,7 @@ from datetime import datetime
 import csv
 from urllib.request import Request
 
-#page = 'https://www.fairprice.com.sg/product/kellys-bockwurst-sausage-200g-11608417'
-#page= 'https://www.fairprice.com.sg/FPProductDisplay?storeId=10151&productId=3074457345617129659&urlRequestType=Base&langId=-1&catalogId=10201'
-page = 'https://www.fairprice.com.sg/product/seng-choon-large-eggs-10s-630g-13104178'
-
+#Scrapes product information from fairprice supermarket's website
 def scrape(quote_page):
 	req = Request(quote_page, headers={'User-Agent': 'Mozilla/5.0'})
 	page = urllib.request.urlopen(req).read()
@@ -26,9 +23,10 @@ def scrape(quote_page):
 	 #w.writerow(["name", "quantity", "price"])
 	 w.writerow([name_box,quantity, price])
 
-# 	with open('products.csv', 'a') as csv_file:
-# 	 w = csv.DictWriter(csv_file, product.keys())
-# 	 w.writeheader()
-# 	 w.writerow(product)
+f = open('products_links.txt', 'r')
+url_list = [] 
+for line in f:
+    url_list.append(line.strip())
 
-scrape(page)
+for i in range(len(url_list)):
+	scrape(url_list[i])

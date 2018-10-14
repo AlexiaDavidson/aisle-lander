@@ -19,7 +19,7 @@
                 <div class="logo">
                     <!--TODO: FFT logo header thing, links back to the landing page-->
                     <h1>
-                        <a href="index.htm">FEAST</a>
+                        <a href="{{url_for('index')}}">FEAST</a>
                     </h1>
                 </div>
                 <div class="shopping-nav">
@@ -62,7 +62,7 @@
                     Recommended
                 </div>
                 <div class="recom-recip">
-                    {%for i in range(recipe|length) %}
+                {%for i in range(recipe|length) %}
                     <div class="recip">
                         <button class="img-btn">
                             <img src="static/paprika.jpeg">
@@ -80,41 +80,16 @@
                 </div>
                 <div class="recom-recip">
                     <!--Recipe 1-->
+                    {%for i in range(recipe|length)%}
                     <div class="recip">
                         <button class="img-btn">
                             <img src="static/paprika.jpeg">
                         </button>
                         <div class="recip-name">
-                            <a href="#" class="recip-link"></a>
+                            <a href="#" class="recip-link">{{recipe[i].name}}</a>
                         </div>
                     </div>
-                    <!--Recipe 2-->
-                    <div class="recip">
-                        <button class="img-btn">
-                            <img src="static/paprika.jpeg">
-                        </button>
-                        <div class="recip-name">
-                            <a href="#" class="recip-link"></a>
-                        </div>
-                    </div>
-                    <!--Recipe 3-->
-                    <div class="recip">
-                        <button class="img-btn">
-                            <img src="static/paprika.jpeg">
-                        </button>
-                        <div class="recip-name">
-                            <a href="#" class="recip-link"></a>
-                        </div>
-                    </div>
-                    <!--Recipe 4-->
-                    <div class="recip">
-                        <button class="img-btn">
-                            <img src="static/paprika.jpeg">
-                        </button>
-                        <div class="recip-name">
-                            <a href="#" class="recip-link"></a>
-                        </div>
-                    </div>
+                    {%endfor%}
                 </div>
             </div>
             <div class="recom">

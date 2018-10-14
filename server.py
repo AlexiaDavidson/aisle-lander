@@ -28,8 +28,3 @@ def surpriseme():
 def search():
 	return render_template('RecipeSearch.htm',  recipe= reader.recipes, product_name = reader.product_list)
 
-@app.route('/search', methods=['POST'])
-def my_form_post():
-    text = request.form['text']
-    processed_text = text.lower().strip()
-    return render_template('RecipeSearch.htm',  recipe= reader.search_by_name(processed_text), product_name = reader.product_list)
