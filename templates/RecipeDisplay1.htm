@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
         <title>Recipe display</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='SurpriseMe_RecipeDisplay.css') }}">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='RecipeDisplay.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='FFT.css') }}">
         <!-- Add icon library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,7 +16,7 @@
                 <div class="logo">
                     <!--TODO: FFT logo header thing, links back to the landing page-->
                     <h1>
-                        <a href="{{ url_for('index') }}">FEAST</a>
+                        <a href="{{url_for('index')}}">FEAST</a>
                     </h1>
                 </div>
                 <div class="shopping-nav">
@@ -27,6 +27,7 @@
                 </div>
             </nav>
         </header>
+
     <div class="Container">
         <div class="Left">
             <div class="recipe-display">
